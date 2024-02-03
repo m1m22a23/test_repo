@@ -6,7 +6,13 @@ public class GameMain {
     System.out.println("じゃんけん...");
     // 課題Bot-1 Playerの手の決定とその表示
     // HandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
-
+    if (args.length == 1) {
+      playerHand = Integer.parseInt(args[0]);
+    } else {
+      System.out.println("コマンドライン引数でプレイヤーの手を決定して下さい");
+      return;
+    }
+    System.out.println("プレイヤー : " + Hand.getHandName(playerHand));
     // 課題User-2 Computerの手の決定とその表示
     // ComputerクラスのdecidesComputerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
 
